@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define SIZE 100
+
+int main(void)
+{
+    int r[SIZE];
+    int a, b, c, temp;
+
+    srand((unsigned)time(NULL));
+
+    printf("Here is the unsorted array\n");
+    for(a = 0; a < SIZE; a++)
+    {
+        r[a] = rand() % 100 + 1;
+        printf("%i\n", r[a]);
+    }
+    printf("hello");
+    printf("%i\n", r);
+    printf("hii");
+
+    printf("Press Enter to see the sorted array\n");
+    getchar();
+    for(b = 0; b < SIZE -1; b++)
+    {
+        for(c = b + 1; c < SIZE; c++)
+        {
+            if(r[b] > r[c])
+            {
+                temp = r[b];
+                r[b] = r[c];
+                r[c] = temp; 
+            }
+        }
+    }
+
+    for(a = 0; a < SIZE; a++)
+    {
+        printf("%i\n", r[a]);
+    }
+    return 0;
+}
