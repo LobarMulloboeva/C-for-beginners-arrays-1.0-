@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int iq[] = {12, 43, 56, 34, 56};
+    char *coworker[] = {"Andy", "Lisa", "Rose", "James", "Scott"};
+
+    for(int i = 0; i < 5; i++ )
+    {
+        printf("My coworker %s's iq score is %i\n", coworker[i], iq[i]);
+    }
+
+}
