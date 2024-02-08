@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int all_rows, first_line, second_line, third_line, sum1, sum2, sum3;
+    int magic[3][3] = {
+        8, 1, 6,
+        3, 5, 7,
+        4, 9, 2
+    };
+
+    puts("Presenting the magic square: \n");
+    for(all_rows = 0; all_rows < 3; all_rows++)
+    {
+        printf("%i, %i, %i \n", magic[all_rows][0], magic[all_rows][1], magic[all_rows][2]);
+    } 
+
+    puts("This is the first line\n");
+    for(first_line = 0; first_line < 1; first_line++)
+    {
+        printf("%i, %i, %i \n", magic[first_line][0], magic[first_line][1], magic[first_line][2]);
+        
+    }
+
+    puts("This is the second line\n");
+    for(second_line = 1; second_line < 2; second_line++)
+    {
+        printf("%i, %i, %i \n", magic[second_line][0], magic[second_line][1], magic[second_line][2]);
+    }
+
+    puts("This is the third line\n");
+    for(third_line = 2; third_line < 3; third_line++)
+    {
+        printf("%i, %i, %i \n", magic[third_line][0], magic[third_line][1], magic[third_line][2]);
+    }
+
+    sum1 =  magic[first_line][0] + magic[first_line][1] + magic[first_line][2];
+    printf("sum1 = %i\n", sum1);
+    sum2 =  magic[second_line][0] + magic[second_line][1] + magic[second_line][2];
+    printf("sum2 = %i\n", sum2);
+    sum3 =  magic[third_line][0] + magic[third_line][1] + magic[third_line][2];
+    printf("sum3 = %i\n", sum3);
+
+}
